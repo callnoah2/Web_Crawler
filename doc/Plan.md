@@ -21,6 +21,49 @@ Deliver:
     *   *Grace Points: if this tag is pushed by midnight on the Sunday before the due date, you will receive up to 5 points back*
 
 
+### Instructions
+    
+* I will create a crawler function that will go through a URL and note other links in that page and go through all the URLS recursivly.
+* The crawler will check a few things before it goes, it will ensure that the depth of the current url is greater than or equal to the max depth
+* it will check if the URL is already in the set of visited links,
+* it will check if the URL is valid
+* once all checks were passed, the crawler function will continue,
+* it will print the URL it visited with the appropriate number of spaces
+* it will add the URL to the visited set
+* then it will call its self with the next URL
+
+* I will also need to create a users manual, this will include how to use the program, common errors and other notes of the program
+
+* I will need to parse through the user input to ensure it is valid, and to check for maxDepth.
+
+### This program
+
+* This program will go through all links from a given website, then check all the links from those websites to a set depth
+* This program will need to ensure that all URLs are valid, it will also need to check if the url has been visited.
+* A good solution will not crash unexpectedly and it will parse through all data before it goes to that URL
+
+* I already know how to
+  * create a recursive function
+  * parse through data and clean it 
+  * validate user input
+  * check if data is in a list
+
+* I dont know how to
+  * Use the new libraries
+  * use a set, I assume it is almost the same as a list.
+  
+### Data
+
+* The crawler fucntion will take in the URL it needs to check, the depth it is at, the maxDepth, and the set of visited sites.
+* New URLs will be collected as the crawler goes
+
+* The output will be a print message of the URL it is currently on, this will be tabbed according to the depth it is at.
+* it will print a final message of the runtime and how many unique sites it visited.
+
+### Algorithms
+
+* this will need an algorithm to go through all the links recursivly.
+
 ## Phase 1: Design (tag name `designed`)
 *(30% of your effort)*
 
