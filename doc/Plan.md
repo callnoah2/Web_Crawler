@@ -83,6 +83,9 @@ Deliver:
     *   *Grace Points: if this tag is pushed by midnight on the Sunday before the due date, you will receive up to 5 points back*
 
 ### crawler
+purpose of function parameters are self documenting
+bad input should raise an exception with proper exeption handeling according to the exception heierarchy
+good input should cause the program to run with no errors
 
 def crawl(URL, depth, maxdepth, visited)
   if depth valuse is greater than max depth return
@@ -102,10 +105,12 @@ def crawl(URL, depth, maxdepth, visited)
     remove any fragments if neccessary
     if new_url is relative, make it absolute
     crawl(new_URL, depth+1, maxDepth, visited)
+  finally: 
+    print(time ran: nowTime - startTime, Unique sites visited: len(visited))
 
 def main()
 
-# (takes sys args,)
+(takes sys args,)
 if len sys args == 1
   print(usage
 elif len sys args == 2
@@ -116,6 +121,7 @@ else
 
 Depth = 0
 visited = ([])
+start time = time.time()
 crawler(URL, Depth, maxDepth, visited)
 
 ## Phase 2: Implementation (tag name `implemented`)
