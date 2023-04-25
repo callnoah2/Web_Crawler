@@ -22,7 +22,6 @@
 #       or product names of the Licensor, except as required for  	  	  
 #       reasonable and customary use of the source files.  	  	  
 
-# python -m pip install --user -r requirements.txt  	  	  
 from bs4 import BeautifulSoup  	  	  
 from urllib.parse import urlparse, urljoin, urldefrag  	  	  
 import requests  	  	  
@@ -32,8 +31,8 @@ import time
 
 print("\tTODO: delete each TODO message as you fulfill it", file=sys.stderr)  	  	  
 
-print("\tTODO: Change the parameters that crawl takes.", file=sys.stderr)  	  	  
-def crawl(url):  	  	  
+
+def crawl(url, depth, maxDepth, visited):
     """  	  	  
     Given an absolute URL, print each hyperlink found within the document.  	  	  
     This function will need more parameters.  	  	  
@@ -64,16 +63,22 @@ if __name__ == "__main__":
 
     ## If no arguments are given...  	  	  
     if len(sys.argv) < 2:  	  	  
-        print("TODO: Put a helpful usage message here.", file=sys.stderr)  	  	  
+        print("Please enter a URL to begin this program, refer to ../doc/Manual.md for more details", file=sys.stderr)
         exit(0)  	  	  
-    else:  	  	  
-        url = sys.argv[1]  	  	  
+    elif len(sys.argv) == 2:
+        url = sys.argv[1]
+        maxDepth = 3
+    else:
+        url = sys.argv[1]
+        maxDepth = sys.argv[2]
+
+    visited = ([])
+    startTime = time.time()
+    depth = 0
 
     print("\tTODO: determine whether variable `url` is an absolute URL", file=sys.stderr)  	  	  
-    print("\t\tIf `url` is not absolute, notify the user and exit", file=sys.stderr)  	  	  
+    print("\t\tIf `url` is not absolute, notify the user and exit", file=sys.stderr)
 
-    print("\tTODO: allow the user to optionally override the default recursion depth of 3", file=sys.stderr)  	  	  
-    maxDepth = 3  	  	  
 
     plural = 's' if maxDepth != 1 else ''  	  	  
     print(f"Crawling from {url} to a maximum depth of {maxDepth} link{plural}")  	  	  
@@ -82,7 +87,7 @@ if __name__ == "__main__":
 
     print("\tTODO: crawl() keeps track of its max depth with a parameter, not a global!", file=sys.stderr)  	  	  
     print("\tTODO: wrap this call to crawl() in a try/except block to catch KeyboardInterrupt", file=sys.stderr)  	  	  
-    crawl(url)  	  	  
+    crawl(url, depth, maxDepth, visited)
 
     print("\tTODO: after the program finishes for any reason, report how long it ran and the number of unique URLs visited", file=sys.stderr)  	  	  
     print("\tTODO: are all of the TODOs deleted?", file=sys.stderr)  	  	  
