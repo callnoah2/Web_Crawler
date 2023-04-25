@@ -84,7 +84,39 @@ Deliver:
 
 ### crawler
 
+def crawl(URL, depth, maxdepth, visited)
+  if depth valuse is greater than max depth return
+  elif url in visited return
+  elif url is invalid return
+  print(space * depth) # space is defined as '    ' (four spaces)
+  append visited (url)
+  Visit URL with the requests library
+  if an error occured
+    print the exception raised
+    return
+  Scan for anchor tags with beautifulsoup
+  check for errors again
+  for each anchor tag
+    check for an href attribute; if not exist, continue
+    new_URL = string in the href attribute
+    remove any fragments if neccessary
+    if new_url is relative, make it absolute
+    crawl(new_URL, depth+1, maxDepth, visited)
 
+def main()
+
+# (takes sys args,)
+if len sys args == 1
+  print(usage
+elif len sys args == 2
+  maxDepth = 3
+  arg 2 = URL
+else
+  arg 2 = URL & arg 3 = maxDepth
+
+Depth = 0
+visited = ([])
+crawler(URL, Depth, maxDepth, visited)
 
 ## Phase 2: Implementation (tag name `implemented`)
 *(15% of your effort)*
