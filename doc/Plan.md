@@ -193,3 +193,14 @@ Deliver:
         *   ...to the next version of Python?
 *   [ ] Make one final commit and push your **completed** Software Development Plan to GitLab.
 *   [ ] Respond to the **Assignment Reflection Survey** on Canvas.
+
+I think my code is written quite well and it is easy to understand
+I don't understand the server we are supposed to use to test the program. So none of my tests include that.
+A bug would be easy to find because the code is so short and simple
+
+I think that my documentation is easy to understand, I used plain english to plan the code.
+I think anyone can look at this project with no knowlage of what it is and they would be able to use it because of the documentation
+
+I think a new feature for this project would be easy to add because this project is already so simple
+
+This program might not work if URLs formatting changes for whatever reason. But it would be an easy update to make.
