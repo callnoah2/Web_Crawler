@@ -148,6 +148,11 @@ Deliver:
     *   Write your test cases in plain language such that a non-coder could run them and replicate your experience.
 *   [ ] **Tag** the last commit in this phase `tested` and push it to GitLab.
 
+I ran the program using the URL for wikipidea and it ran as expected.
+I ran the program using the amazon URL and got an error because my connection timed out, this was expected.
+Keyboard interupt works as expected, and it displays the correct messages when done.
+I am able to change the maxDepth as expected
+
 
 ## Phase 4: Deployment (tag name `deployed`)
 *(5% of your effort)*

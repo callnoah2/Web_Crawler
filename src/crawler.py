@@ -82,4 +82,5 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         print(" Crawling interrupted by user.")
     finally:
-        print(f"Ran for: {time.time()-startTime} seconds! visited {len(visited)} different URLs!")
+        time = "{:.2f}".format(time.time() - startTime)
+        print(f"Ran for: {time} seconds and visited {len(visited)} different URLs!")
