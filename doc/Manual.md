@@ -11,15 +11,12 @@ After the program has been started, it will continue until all links in the rang
 program will display the URL it is on and any errors that have occured
 
 ## To quit
-hit control c "^c" to exit the program early
+To stop the program early, simply press Ctrl+C in the terminal.
 
 ## Final message
-When finished, the program will give the runtime and how many unique links it has opened.
+When the program has finished running, it will display the total runtime and the number of unique links that were opened during the crawl.
 
 ## Common errors:
-Starting URL is not absolute
-    this causes the program to end early, to fix this, modify the URL to be absolute
-URL in page is no longer valid
-    This causes the program to catch an error and continue
-Server Runtime,
-    the server may time out and case the program to end early, to fix this, restart the server
+Starting URL is not absolute: This can cause the program to terminate early. To fix this, ensure that the starting URL is an absolute URL.
+URL in page is no longer valid: This can cause the program to catch an error and continue.
+Server runtime: The server may time out and cause the program to terminate early. To fix this, restart the server.
