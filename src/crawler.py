@@ -34,7 +34,7 @@ def crawl(url, depth, maxDepth, visited):
         return
 
     visited.append(url)
-    print(f"Depth {depth}: {url}")
+    print(("    ")*depth + f"{url}")
 
     try:
         response = requests.get(url)
@@ -80,4 +80,6 @@ if __name__ == "__main__":
     try:
         crawl(url, depth, maxDepth, visited)
     except KeyboardInterrupt:
-        print("Crawling interrupted by user.")
+        print(" Crawling interrupted by user.")
+    finally:
+        print(f"Ran for: {time.time()-startTime} seconds! visited {len(visited)} different URLs!")
